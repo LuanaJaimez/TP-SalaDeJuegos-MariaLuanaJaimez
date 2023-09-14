@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sala de Juegos</a>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./ahorcado">Ahorcado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./mayoromenor">Mayor o menor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./preguntados">Preguntados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./quienSoy">Quien soy</a>
+          </li>
+          <li class="navbar-right-user">
+            <a class="nav-link"><h4>Bienvenido! {{user?.email}}</h4></a>
+          </li>
+          <li class="navbar-right-logout">
+            <button class="btn btn-secondary" type="submit" (click)="logout()">Cerrar Sesión</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>

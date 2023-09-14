@@ -1,0 +1,38 @@
+<form class="form" [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-control">
+      <mat-label>Correo electronico</mat-label>
+      <input matInput formControlName="email" type="text" required />
+        <mat-error *ngIf="email?.hasError('required')" class="text-danger">Ingrese correo electronico</mat-error>
+        <mat-error *ngIf="email?.hasError('email')" class="text-danger">Correo electronico invalido</mat-error>
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-control">
+      <mat-label>Usuario</mat-label>
+      <input matInput formControlName="user" type="text" required />
+        <mat-error *ngIf="user?.hasError('required')" class="text-danger">Ingrese usuario</mat-error>
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-control">
+      <mat-label>Contraseña</mat-label>
+      <input matInput formControlName="password" type="password" required />
+        <mat-error *ngIf="password?.hasError('required')" class="text-danger">Ingrese contraseña</mat-error>
+    </mat-form-field>
+
+    <br><br>
+
+    <mat-form-field class="form-control">
+      <mat-label>Confirmar contraseña</mat-label>
+      <input matInput formControlName="password2" type="password"  required />
+        <mat-error *ngIf="password2?.hasError('required')" class="text-danger">Ingrese contraseña</mat-error>
+    </mat-form-field>
+
+    <br><br>
+
+    <div>
+      <button [disabled]="formReg.invalid" class="btn btn-primary" style="width:100%" type="submit">Enviar</button>
+    </div>
+</form>

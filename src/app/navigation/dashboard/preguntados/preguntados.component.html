@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="card border-primary mb-3" style="max-width: 100rem;">
+      <div class="container-fluid py-1">
+        <div class="card-body">
+          <h2 class="card-title">Preguntados</h2>
+          <p class="card-text">Se muestran una serie de imagenes y se debe contestar correctamente la pregunta.
+          <p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="d-flex justify-content-center">
+
+      <div class="card border-dark mb-3">
+
+        <div>
+          <div class="p-5 bg-light text-center" style="height: 400px">
+              <p>¿De que casa es este personaje?</p> 
+              <br>         
+                <img src={{characterImg}} alt="character" width="max" height="200">
+                <p>{{characterName}}</p>
+          </div>
+        </div>
+      
+        <div>
+          <hr>
+          <button class="btn btn-primary" style="width:100%; margin:1px" (click)="checkAnswer('Gryffindor')">Gryffindor</button>
+          <button class="btn btn-primary" style="width:100%; margin:1px" (click)="checkAnswer('Slytherin')">Slytherin</button>
+          <button class="btn btn-primary" style="width:100%; margin:1px" (click)="checkAnswer('Hufflepuff')">Hufflepuff</button>
+          <button class="btn btn-primary" style="width:100%; margin:1px" (click)="checkAnswer('Ravenclaw')">Ravenclaw</button>
+          <br>
+          <br>
+          <p>Puntos: {{points}}</p> 
+        </div>
+
+      </div>
+
+    </div>
+  
+</div>

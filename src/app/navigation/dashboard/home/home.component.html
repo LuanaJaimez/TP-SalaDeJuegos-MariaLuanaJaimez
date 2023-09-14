@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 mx-auto mt-5" >
+      <div style="max-width: 100rem;">
+        <div class="card bg-light mb-3">
+          <div class="card-header">Perfil</div>
+          <div *ngIf="authService.userData as user">
+            <div class="row align-items-md-stretch">
+                <div class="col-md-2">
+                <img class="img-thumbnail img-fluid"
+                  src="{{(user.photoURL) ? user.photoURL : '/assets/usuariogenerico.jpg'}}" alt="{{user.displayName}}">
+                </div>
+                <div class="col-md-6 info">
+                  <p>Usuario: <strong>{{(user.displayName)}}</strong></p>
+                  <p>Email: <strong>{{user.email}}</strong></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-secondary mb-3" style="max-width: 100rem;">
+        <div style="max-width: 100rem;">
+          <app-chat></app-chat>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

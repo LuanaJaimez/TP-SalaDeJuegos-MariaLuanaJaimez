@@ -1,0 +1,7 @@
+#background {
+  background-image: url("/assets/background.jpg");
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-size: cover;
+}

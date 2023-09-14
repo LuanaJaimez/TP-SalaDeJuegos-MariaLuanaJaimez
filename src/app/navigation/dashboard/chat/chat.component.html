@@ -1,0 +1,27 @@
+<div>
+    <div style="max-width: 100rem;">
+        <div class="card-header">Chat</div>
+        <div class="card-body app-message" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px; padding: 3%;">
+            <div *ngFor="let chat of chatService.chats">
+                <div *ngIf="chatService.userLog.uid == chat.uid">
+                    <div class="card border-light mb-3" style="max-width: 20%;">
+                        <div>
+                            <p class="card-header small">{{chat.name}} <br> {{chat.message}}</p>
+                            <p class="card-text small">{{chat.date}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="chatService.userLog.uid != chat.uid">
+                    <div class="card border-light mb-3" style="max-width: 20%;">
+                        <div>
+                            <p class="card-header small">{{chat.name}} <br> {{chat.message}}</p>
+                            <p class="card-text small">{{chat.date}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <input type="text" name="message" class="form-control" [(ngModel)]="message" (keyup.enter)="sendMessage()">
+</div>

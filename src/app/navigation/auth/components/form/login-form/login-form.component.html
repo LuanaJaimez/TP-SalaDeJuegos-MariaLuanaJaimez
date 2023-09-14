@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-control">
+    <mat-label>Correo electronico</mat-label>
+    <input matInput formControlName="email" type="text" autocomplete="off" required />
+      <mat-error *ngIf="email?.hasError('required')" class="text-danger">Ingrese correo electronico</mat-error>
+      <mat-error *ngIf="email?.hasError('email')" class="text-danger">Ingrese correo electronico</mat-error>
+  </mat-form-field>
+
+  <br><br>
+
+  <mat-form-field class="form-control">
+    <mat-label>Contraseña</mat-label>
+    <input matInput formControlName="password" type="password" autocomplete="off" required />
+      <mat-error *ngIf="password?.hasError('required')" class="text-danger">Ingrese contraseña</mat-error>
+  </mat-form-field>
+
+  <br><br>
+
+  <button [disabled]="formLogin.invalid" style="width:100%" class="btn btn-primary" type="submit">Ingresar</button>
+</form>
+<div class="d-flex justify-content-center">
+  <button style="width:100%" class="btn btn-outline-primary" (click)="fillForm()">Acceso rapido</button>
+</div>
+  

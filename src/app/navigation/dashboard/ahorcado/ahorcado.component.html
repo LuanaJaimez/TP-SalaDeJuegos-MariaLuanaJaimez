@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="card border-primary mb-3" style="max-width: 100rem;">
+    <div class="container-fluid py-1">
+      <div class="card-body">
+        <h2 class="card-title">Ahorcado</h2>
+        <p class="card-text">El ahorcado es un juego donde se da una palabra y hay que trata de adivinarla dentro de un cierto número de oportunidades.
+        <p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="card border-dark mb-3" style="max-width: 100rem;">
+      <img src={{ahorcado}} alt="ahorcado" width="max" height="200">
+      <br>
+      <div class="row" *ngIf="win">
+        <div class="col text-center">
+          <h3 class="win">Acertaste!</h3>
+        </div>
+      </div>
+      <div class="row" *ngIf="lost">
+        <div class="col text-center">
+          <h3 class="lost">Perdiste...</h3>
+          <p class="lost">La palabra era: <a style="font-weight: bold;">{{word}}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-md-stretch">
+      <div class="col-md-10 mx-auto mt-5">
+        <div class="card border-dark mb-3" style="max-width: 100rem;">
+          <div id="buttons">
+            <div class="column">
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('A') ; actionMethod($event)">A</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('B') ; actionMethod($event)">B</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('C') ; actionMethod($event)">C</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('D') ; actionMethod($event)">D</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('E') ; actionMethod($event)">E</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('F') ; actionMethod($event)">F</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('G') ; actionMethod($event)">G</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('H') ; actionMethod($event)">H</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('I') ; actionMethod($event)">I</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('J') ; actionMethod($event)">J</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('K') ; actionMethod($event)">K</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('L') ; actionMethod($event)">L</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('M') ; actionMethod($event)">M</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('N') ; actionMethod($event)">N</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('Ñ') ; actionMethod($event)">Ñ</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('O') ; actionMethod($event)">O</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('P') ; actionMethod($event)">P</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('Q') ; actionMethod($event)">Q</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('R') ; actionMethod($event)">R</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('S') ; actionMethod($event)">S</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('T') ; actionMethod($event)">T</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('U') ; actionMethod($event)">U</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('V') ; actionMethod($event)">V</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('W') ; actionMethod($event)">W</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('X') ; actionMethod($event)">X</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('Y') ; actionMethod($event)">Y</button>
+              <button class="btn btn-primary" [disabled]="letterButton" style="margin:1px;" (click)="chosenOption('Z') ; actionMethod($event)">Z</button>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1>{{hiddenWord}}</h1>
+          <p>INTENTOS &nbsp;{{ tries }} / 6</p>
+        </div>
+      </div>
+    </div>
+</div>

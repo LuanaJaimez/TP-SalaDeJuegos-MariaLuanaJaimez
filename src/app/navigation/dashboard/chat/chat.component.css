@@ -1,0 +1,5 @@
+.app-message{
+  padding: 0px;
+  height: 100%;
+  overflow-y:scroll;
+}

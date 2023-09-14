@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sala-de-juegoslj"
+  },
+  "targets": {
+    "sala-de-juegoslj": {
+      "hosting": {
+        "TP-SalaDeJuegos": [
+          "sala-de-juegoslj"
+        ]
+      }
+    }
+  }
+}
