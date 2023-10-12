@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
 import { MayorMenorComponent } from './mayor-menor/mayor-menor.component';
 import { PreguntadosComponent } from './preguntados/preguntados.component';
+import { ViboritaComponent } from './viborita/viborita.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PreguntadosComponent } from './preguntados/preguntados.component';
     ChatComponent,
     MayorMenorComponent,
     PreguntadosComponent,
+    ViboritaComponent
   ],
   imports: [
     FormsModule,

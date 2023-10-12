@@ -15,12 +15,14 @@
       <div class="row" *ngIf="win">
         <div class="col text-center">
           <h3 class="win">Acertaste!</h3>
+          <button class="btn btn-secondary" (click)="reload()">Jugar de nuevo</button>
         </div>
       </div>
       <div class="row" *ngIf="lost">
         <div class="col text-center">
           <h3 class="lost">Perdiste...</h3>
           <p class="lost">La palabra era: <a style="font-weight: bold;">{{word}}</a></p>
+          <button class="btn btn-secondary" (click)="reload()">Jugar de nuevo</button>
         </div>
       </div>
     </div>

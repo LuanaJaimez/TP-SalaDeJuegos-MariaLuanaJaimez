@@ -17,21 +17,22 @@
     </div>
 </nav>
 
+
 <div class="row" id="background">
-    <div class="col-md-6 mx-auto mt-5">
-        <div class="card bg-light mb-3">
-            <div class="card-header">Login</div>
-            <h1>Bienvenido</h1>
-            <div class="card-body">
-                <app-login-form (formData)="login($event)"></app-login-form>
-                <hr>
-                <button class="btn btn-outline-primary" (click)="loginWithGoogle()">Login con Google</button>
-                <div class="form-group mt-3">
-                    <p>
-                        Crear una cuenta? <a [routerLink]="['/register']">Registrarse</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="col-md-6 mx-auto mt-5">
+      <div class="card bg-light mb-3">
+          <div class="card-header">Login</div>
+          <h1>Bienvenido</h1>
+          <div class="card-body">
+              <app-login-form (formData)="login($event)"></app-login-form>
+              <hr>
+              <button class="btn btn-outline-primary" (click)="loginWithGoogle()">Login con Google</button>
+              <div class="form-group mt-3">
+                  <p>
+                      Crear una cuenta? <a [routerLink]="['/register']">Registrarse</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

@@ -1,7 +1,9 @@
-#background {
-    background-image: url("/assets/background.jpg");
+#background{
     display: flex;
-    height: 100%;
-    align-items: center;
+    height: 92vh;
+    width: 100%;
+    padding-top: 3%;
+    justify-content: center;
+    background-image: url("/assets/background.jpg");
     background-size: cover;
 }

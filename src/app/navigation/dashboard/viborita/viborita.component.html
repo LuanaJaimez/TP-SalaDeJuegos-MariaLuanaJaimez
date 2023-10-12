@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="card border-primary mb-3" style="max-width: 100rem;">
+        <div class="container-fluid py-1">
+          <div class="card-body">
+            <h2 class="card-title">El juego de la viborita</h2>
+            <p class="card-text" >Es un juego donde manejamos una serpiente y la misma debera ir comiendo los items que aparecen en el tablero para poder sumar puntos. <br>
+                Las unicas reglas son: <br>
+                - La serpiente no puede chocar contra las paredes <br>
+                - La serpiente no puede comerse a si misma <br>
+                Cómo jugar: <br>
+                Para mover la serpiente utilice las fechas del teclado, hasta que no presione alguna de las feclas del teclado no empezará el juego <br>
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div class="game-over" *ngIf="gameOver" role="alert">
+        <div class="col text-center">
+          <h3 class="gameOver">Perdiste...</h3>
+          <p>Tu puntuacion final es: {{food?.currentScore}}</p>
+        </div>
+    </div>
+
+    <div class="col text-center">
+        <button class="btn btn-primary" (click)="restart()">Reiniciar</button>
+    </div>
+
+    <div class="row align-items-md-stretch">
+        <div class="container2" #fullScreen>
+            <div class="game-board">
+            </div>
+            <div>
+                <p>Puntaje: {{food?.currentScore}}</p>
+            </div>
+        </div>
+    </div>
+</div>

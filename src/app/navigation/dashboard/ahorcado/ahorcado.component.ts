@@ -43,6 +43,30 @@ export class AhorcadoComponent implements OnInit {
       this.tries++;
     }
 
+    if(this.tries === 1){
+      this.ahorcado = "assets/ahorcado/ahorcado1.jpg"
+    }
+
+    if(this.tries === 2){
+      this.ahorcado = "assets/ahorcado/ahorcado2.jpg"
+    }
+
+    if(this.tries === 3){
+      this.ahorcado = "assets/ahorcado/ahorcado3.jpg"
+    }
+
+    if(this.tries === 4){
+      this.ahorcado = "assets/ahorcado/ahorcado4.jpg"
+    }
+
+    if(this.tries === 5){
+      this.ahorcado = "assets/ahorcado/ahorcado5.jpg"
+    }
+
+    if(this.tries === 6){
+      this.ahorcado = "assets/ahorcado/ahorcadofinal.jpg"
+    }
+
     const hiddenWordArray = this.hiddenWord.split(' ');
 
     for (let i = 0; i < this.word.length; i++) {
@@ -70,6 +94,10 @@ export class AhorcadoComponent implements OnInit {
       this.lost = true;
       this.ahorcado = "assets/ahorcado/ahorcadofinal.jpg";
     }
+  }
+
+  reload() {
+    location.reload();
   }
 
 }
