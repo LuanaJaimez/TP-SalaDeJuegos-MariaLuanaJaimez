@@ -1,7 +1,7 @@
 <div>
     <div style="max-width: 100rem;">
         <div class="card-header">Chat</div>
-        <div class="card-body app-message" data-mdb-perfect-scrollbar="true" style="position: relative; height: 500px; padding: 3%;">
+        <div class="card-body app-message" data-mdb-perfect-scrollbar="true" style="position: relative; height: 500px; padding: 3%; overflow: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
             <div *ngFor="let chat of chatService.chats">
                 <div *ngIf="chatService.userLog.uid == chat.uid">
                     <div class="card border-light mb-3" style="max-width: 20%;">
